@@ -12,5 +12,5 @@ module.exports = override(
     javascriptEnabled: true,
     modifyVars: { '@primary-color': '#e53f67' },
   }),
-  addWebpackModuleRule({ test: /\.worker\.js$/, use: { loader: 'worker-loader' } }),
+  addWebpackModuleRule({ test: /\.worker\.{ts|js}$/, use: { loader: 'worker-loader' } }),
 )

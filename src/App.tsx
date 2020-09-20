@@ -1,8 +1,9 @@
 import React from 'react'
-import Mapozaic from 'Mapozaic/Mapozaic'
+// import Mapozaic from 'Mapozaic/Mapozaic'
+import CanvasDemo from 'Conf42/CanvasDemo'
 
 function App() {
-  return <Mapozaic />
+  return <CanvasDemo />
   // return <SvgTest />
 }
 

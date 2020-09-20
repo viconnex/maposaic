@@ -20,17 +20,20 @@
   height: 100vh;
   opacity: 1;
 }
+
 .overmap {
   padding: 8px;
   top: 0;
   left: 0;
   position: absolute;
 }
+
 .spinner {
   animation: spin 2s linear infinite;
   width: 18px;
   height: 18px;
 }
+
 @keyframes spin {
   100% {
     -webkit-transform: rotate(360deg);
