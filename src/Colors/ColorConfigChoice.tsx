@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { Popover, Checkbox, Divider } from 'antd'
+import React, { useEffect, useState } from 'react'
+import { Checkbox, Divider, Popover } from 'antd'
 import { ChromePicker, ColorResult } from 'react-color'
 import Title from 'antd/lib/typography/Title'
 import {
@@ -8,11 +8,11 @@ import {
   DEFAULT_SHADING_CONFIG,
   RANDOM_CONFIG,
 } from 'Colors/constants'
-import { ColorConfig, ShadingColorConfig, PaletteColorConfig, ColorConfigType } from 'Colors/types'
+import { ColorConfig, ColorConfigType, PaletteColorConfig, ShadingColorConfig } from 'Colors/types'
 import 'Colors/colorConfigChoice.style.less'
 import { CheckboxChangeEvent } from 'antd/lib/checkbox'
 import { SpecificColorTransforms } from 'Maposaic/types'
-import { createColor, rgbToHex, getMaposaicColorsFromColorConfig } from 'Colors/utils'
+import { createColor, getMaposaicColorsFromColorConfig, rgbToHex } from 'Colors/utils'
 import ColorConfigSettings from 'Colors/ColorConfigSettings'
 
 import 'Colors/colorConfigSettings.style.less' // for specific color picker

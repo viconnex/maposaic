@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, Suspense } from 'react'
+import React, { Suspense, useEffect, useRef, useState } from 'react'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import { Button, Tooltip } from 'antd'
@@ -23,8 +23,8 @@ import { ROAD_SIMPLE_WHITE, WATER_CYAN } from 'Colors/mapbox'
 import { RANDOM_CONFIG, ROAD_WHITE } from 'Colors/constants'
 import {
   MapboxStyle,
-  MaposaicGeoURLParamKey,
   MAPOSAIC_STYLE_URL_PARAM_KEY,
+  MaposaicGeoURLParamKey,
   OnPosterSizeChangePayload,
   SpecificColorTransforms,
 } from 'Maposaic/types'
@@ -381,7 +381,7 @@ const MapboxGLMap = (): JSX.Element => {
       return
     }
     mosaicElement.toBlob((blob) => {
-      var link = document.createElement('a')
+      const link = document.createElement('a')
       link.download = placeName ? `maposaic - ${placeName}` : 'maposaic'
       link.href = URL.createObjectURL(blob)
       link.click()

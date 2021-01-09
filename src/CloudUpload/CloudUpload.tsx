@@ -4,9 +4,9 @@ import { CheckCircleTwoTone, CloudUploadOutlined, LoadingOutlined, SendOutlined 
 import { ProgressProps } from 'antd/lib/progress'
 import firebase from 'firebase/app'
 import { firebaseAuth } from 'firebaseService/initialize'
-import { uploadBlob, getPicturePathFromFileId, postOrUpdatePicturesDocument } from 'firebaseService/services'
+import { getPicturePathFromFileId, postOrUpdatePicturesDocument, uploadBlob } from 'firebaseService/services'
 
-import { PRIMARY_COLOR, DISABLED_COLOR, SUCCESS_COLOR } from 'constants/colors'
+import { DISABLED_COLOR, PRIMARY_COLOR, SUCCESS_COLOR } from 'constants/colors'
 import 'CloudUpload/style.less'
 import { TOOLTIP_ENTER_DELAY } from 'constants/ux'
 import { useHistory } from 'react-router-dom'

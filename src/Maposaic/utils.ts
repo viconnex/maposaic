@@ -1,11 +1,11 @@
 import {
   AntColors,
-  DEFAULT_SHADING_CONFIG,
-  RANDOM_CONFIG,
-  PRESET_PALETTES,
   DEFAULT_PALETTE_CONFIG,
+  DEFAULT_SHADING_CONFIG,
+  PRESET_PALETTES,
+  RANDOM_CONFIG,
 } from 'Colors/constants'
-import { ColorConfig, ColorConfigType, PaletteType, ShadingPresetName, ShadingType, PaletteOrigin } from 'Colors/types'
+import { ColorConfig, ColorConfigType, PaletteOrigin, PaletteType, ShadingPresetName, ShadingType } from 'Colors/types'
 import { MaposaicColorURLParamKey, MaposaicGeoURLParamKey } from 'Maposaic/types'
 
 const COLORS_SEPARATOR = ','

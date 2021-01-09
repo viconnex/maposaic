@@ -1,5 +1,5 @@
 import { MAPBOX_TOKEN } from 'constants/mapbox'
-import { GeocodingData, PlaceType, GeonameData } from 'types/geo'
+import { GeocodingData, GeonameData, PlaceType } from 'types/geo'
 import mapboxgl from 'mapbox-gl'
 import { GEOCODING_BASE_URL } from 'Geo/constants'
 
@@ -20,8 +20,8 @@ export const getPlaceNameFromPosition = async (center: mapboxgl.LngLat | null) =
   const geoResponse = await fetch(`${GEOCODING_BASE_URL}/${center.lng},${center.lat}.json?access_token=${MAPBOX_TOKEN}`)
   const geoCoding: GeocodingData = await geoResponse.json()
   for (const nextRelevantPlaceType of PLACE_TYPE_RELEVANCE) {
-    for (let feature of geoCoding.features) {
-      for (let foundPlaceType of feature.place_type) {
+    for (const feature of geoCoding.features) {
+      for (const foundPlaceType of feature.place_type) {
         if (foundPlaceType === nextRelevantPlaceType) {
           return feature.place_name
         }

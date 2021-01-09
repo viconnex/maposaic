@@ -1,8 +1,8 @@
-import { Size, imagePoint } from 'Canvas/types'
+import { imagePoint, Size } from 'Canvas/types'
 import { MaposaicColors, RGBColor } from 'Colors/types'
-import { getSourcePixelIndexFromTargetPixelIndex, getAdjacentPoints } from 'Canvas/utils'
-import { getPointFromPixelIndex, getPixelIndexFromPoint } from 'Canvas/utils'
-import { createRGB, transformInitialColor, isColorSimilar, getMaposaicColorsWithoutSpecific } from 'Colors/utils'
+import { getAdjacentPoints, getSourcePixelIndexFromTargetPixelIndex } from 'Canvas/utils'
+import { getPixelIndexFromPoint, getPointFromPixelIndex } from 'Canvas/utils'
+import { createRGB, getMaposaicColorsWithoutSpecific, isColorSimilar, transformInitialColor } from 'Colors/utils'
 import { SpecificColorTransforms } from 'Maposaic/types'
 
 const MAX_SET_SIZE = 16777216

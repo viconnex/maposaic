@@ -1,9 +1,9 @@
-import { Size, imagePoint, RGBColor } from 'Conf42/types'
+import { imagePoint, RGBColor, Size } from 'Conf42/types'
 import {
-  getSourcePixelIndexFromTargetPixelIndex,
   getAdjacentPoints,
-  getPointFromPixelIndex,
   getPixelIndexFromPoint,
+  getPointFromPixelIndex,
+  getSourcePixelIndexFromTargetPixelIndex,
 } from 'Conf42/conf42.utils'
 
 export class CanvasDataTransformer {

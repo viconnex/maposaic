@@ -74,7 +74,7 @@ export const getMaposaicColorsWithoutSpecific = (
     return mainColors
   }
   const specificColors = new Set()
-  for (let specificColor in specificColorTransforms) {
+  for (const specificColor in specificColorTransforms) {
     if (specificColorTransforms[specificColor].color) {
       specificColors.add(specificColorTransforms[specificColor].color)
     }
@@ -82,7 +82,7 @@ export const getMaposaicColorsWithoutSpecific = (
 
   const colors = []
 
-  for (let color of mainColors) {
+  for (const color of mainColors) {
     if (!specificColors.has(color)) {
       colors.push(color)
     }

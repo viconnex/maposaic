@@ -1,6 +1,6 @@
 import { CompassOutlined } from '@ant-design/icons'
 import { Button } from 'antd'
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 import 'PlaceName/placeName.style.less'
 

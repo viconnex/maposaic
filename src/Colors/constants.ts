@@ -1,16 +1,16 @@
 import {
+  blue,
+  cyan,
+  geekblue,
+  gold,
+  green,
+  grey,
+  lime,
+  magenta,
+  purple,
   red,
   volcano,
-  gold,
   yellow,
-  lime,
-  green,
-  cyan,
-  blue,
-  geekblue,
-  purple,
-  magenta,
-  grey,
 } from '@ant-design/colors'
 
 import { coolors } from 'Colors/palettes/coolors'

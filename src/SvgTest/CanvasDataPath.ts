@@ -1,17 +1,17 @@
 import {
-  ImagePoint,
   Adjacent,
   BorderPoint,
   Corner,
   createRGB,
-  getPointFromPixelIndex,
-  MOVE_OFFSET,
   getAdjacentFromBorder,
   getAdjacentPoint,
   getPixelIndexFromPoint,
+  getPointFromPixelIndex,
+  ImagePoint,
   isColorSimilar,
-  RGBColor,
+  MOVE_OFFSET,
   PointWithIndex,
+  RGBColor,
 } from './svgUtils'
 
 export class CanvasDataPath {
