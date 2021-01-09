@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 import { Spin } from 'antd'
 import spinner from 'assets/spinner.png'
 import 'spinner.style.less'
@@ -7,6 +7,7 @@ import 'App.style.less'
 
 const Gallery = lazy(() => import('Gallery/Gallery'))
 const Maposaic = lazy(() => import('Maposaic/Maposaic'))
+// const GameOfLife = lazy(() => import('GameOfLife/GameOfLife'))
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
           <Route path="/gallery">
             <Gallery />
           </Route>
+          {/* <Route path="/game-of-life">
+            <GameOfLife />
+          </Route> */}
           <Route path="/">
             <Maposaic />
           </Route>
