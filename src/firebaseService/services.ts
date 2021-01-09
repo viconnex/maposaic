@@ -36,7 +36,7 @@ export const postOrUpdatePicturesDocument = async ({
   const sanethizedPayload = sanethizePayload(payload)
 
   if (documentId) {
-    const docRef = await db.collection(PICTURE_COLLECTION_ID).doc(documentId)
+    const docRef = db.collection(PICTURE_COLLECTION_ID).doc(documentId)
     docRef.update(sanethizedPayload)
 
     return documentId

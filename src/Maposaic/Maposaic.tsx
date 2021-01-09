@@ -164,7 +164,7 @@ const MapboxGLMap = (): JSX.Element => {
   }, [])
 
   useEffect(() => {
-    const paintMosaic = async (newMap: mapboxgl.Map): Promise<void> => {
+    const paintMosaic = (newMap: mapboxgl.Map): void => {
       setIsLoading(true)
       toggleCanvasOpacity(true)
       const mapboxCanvas = newMap.getCanvas()
@@ -456,7 +456,7 @@ const MapboxGLMap = (): JSX.Element => {
               disabled={isLoading}
             />
           </Tooltip>
-          <Suspense fallback={<UploadButton isDisabled={true} onUploadClick={() => {}} />}>
+          <Suspense fallback={<UploadButton isDisabled={true} />}>
             <CloudUpload
               mapZoom={map?.getZoom()}
               mapCenter={map?.getCenter()}

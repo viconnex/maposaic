@@ -82,6 +82,7 @@ const ColorConfigChoice = ({
         {Object.entries(ColorConfigNamesAndImage).map(([configName, config]) => {
           return (
             <div
+              key={configName}
               className={`color-choice__configs__config${
                 colorConfig.type === configName ? ' color-choice__configs__config--selected' : ''
               }`}

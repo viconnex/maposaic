@@ -60,7 +60,7 @@ const StatusMessage = ({ taskState, documentId }: { taskState: TaskState; docume
   return <div>Upload failed</div>
 }
 
-export const UploadButton = ({ isDisabled, onUploadClick }: { isDisabled: boolean; onUploadClick: () => void }) => {
+export const UploadButton = ({ isDisabled, onUploadClick }: { isDisabled: boolean; onUploadClick?: () => void }) => {
   return (
     <Tooltip title="Upload to public gallery" mouseEnterDelay={TOOLTIP_ENTER_DELAY}>
       <Button
@@ -168,7 +168,7 @@ const CloudUpload = ({
   }
   const memoizedOnComplete = useCallback(onComplete, [pictureDocumentId, anonymousUid])
 
-  const onSnapshot = (snapshot: firebase.storage.UploadTaskSnapshot, rand: number) => {
+  const onSnapshot = (snapshot: firebase.storage.UploadTaskSnapshot) => {
     setProgress((snapshot.bytesTransferred / snapshot.totalBytes) * 100)
     setTaskState(UploadStatus.Running)
   }
@@ -180,15 +180,16 @@ const CloudUpload = ({
     const unsubscribe = uploadTask.on(
       'state_changed',
       (snapshot) => {
-        onSnapshot(snapshot, Math.random())
+        onSnapshot(snapshot)
       },
       (error) => {
         onError(error)
       },
+      // eslint-disable-next-line @typescript-eslint/no-misused-promises
       async () => {
         try {
-          const downloadURL = await uploadTask.snapshot.ref.getDownloadURL()
-          memoizedOnComplete({ downloadURL, fileId })
+          const downloadURL = (await uploadTask.snapshot.ref.getDownloadURL()) as string
+          void memoizedOnComplete({ downloadURL, fileId })
         } catch (e) {
           onError()
         }
