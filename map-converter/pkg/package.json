@@ -1,0 +1,15 @@
+{
+  "name": "map-converter",
+  "collaborators": [
+    "Victor Lebrun <victor.lebrun011@gmail.com>"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "map_converter_bg.wasm",
+    "map_converter.js",
+    "map_converter.d.ts"
+  ],
+  "module": "map_converter.js",
+  "types": "map_converter.d.ts",
+  "sideEffects": false
+}
