@@ -7,7 +7,7 @@ import 'App.style.less'
 
 const Gallery = lazy(() => import('Gallery/Gallery'))
 const Maposaic = lazy(() => import('Maposaic/Maposaic'))
-// const GameOfLife = lazy(() => import('GameOfLife/GameOfLife'))
+const GameOfLife = lazy(() => import('GameOfLife/GameOfLife'))
 
 function App() {
   return (
@@ -25,9 +25,9 @@ function App() {
           <Route path="/gallery">
             <Gallery />
           </Route>
-          {/* <Route path="/game-of-life">
+          <Route path="/game-of-life">
             <GameOfLife />
-          </Route> */}
+          </Route>
           <Route path="/">
             <Maposaic />
           </Route>

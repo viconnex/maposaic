@@ -1,22 +1,28 @@
+import { Universe } from 'map-converter'
 import React, { useEffect, useState } from 'react'
 
 const GameOfLife = () => {
   const [gameResult, setGameResult] = useState<null | string>(null)
-  const loadMapConverter = async () => {
-    const wasm = await import('map-converter')
-    if (wasm.greet) {
-      wasm.greet()
+  const loadMapConverter = () => {
+    const universe = Universe.new()
+
+    const renderLoop = () => {
+      setGameResult(universe.render())
+      universe.tick()
+
+      requestAnimationFrame(renderLoop)
     }
-    // requestAnimationFrame(renderLoop)
+
+    requestAnimationFrame(renderLoop)
   }
+  useEffect(() => {
+    loadMapConverter()
+  }, [])
 
   //   console.log(mapConverter)
   return (
     <div>
       <pre>{gameResult ?? "le jeu n'est pas disponible"}</pre>
-      <div>
-        <button onClick={loadMapConverter}>Load</button>
-      </div>
     </div>
   )
 }

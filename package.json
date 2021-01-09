@@ -23,7 +23,7 @@
     "firebase": "^8.0.0",
     "less": "^3.11.1",
     "less-loader": "^5.0.0",
-    "map-converter": "file:./map-converter/pkg",
+    "map-converter": "file:map-converter/pkg",
     "mapbox-gl": "^1.11.0",
     "react": "^16.13.1",
     "react-color": "^2.18.0",
