@@ -1,6 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
-
+// eslint-disable-next-line
 const CracoLessPlugin = require('craco-less')
 
 /* eslint-env commonjs */
@@ -11,7 +9,7 @@ module.exports = {
       options: {
         lessLoaderOptions: {
           lessOptions: {
-            modifyVars: { '@primary-color': '#1DA57A' },
+            modifyVars: { '@primary-color': '#e53f67' },
             javascriptEnabled: true,
           },
         },
